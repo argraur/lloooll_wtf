@@ -14,17 +14,21 @@
 #include <cmath>
 #include "Rectangle.cpp"
 
+void InputToRect(Rectangle *A) {
+        for ( int i = 0; i < 4; i++) {
+                int tmp, tmp1;
+                std::cin >> tmp >> tmp1;
+                A -> Input(i, tmp, tmp1);
+        }
+}
+
 int main() {
 	Rectangle *A = new Rectangle;
-	for ( int i = 0; i < 4; i++) {
-		int tmp, tmp1;
-		std::cin >> tmp >> tmp1;
-		A -> Input(i, tmp, tmp1);
-	}
+	Rectangle *B = new Rectangle;
+	InputToRect(A);
+	InputToRect(B);
+	std::cout << "In A" << std::endl;
 	A -> Out();
-//	A -> Move(1, 2);
-	A -> Out();
-	int t; std::cin >> t;
-	A -> Resize(t);
-	A -> Out();
+	std::cout << "In B" << std::endl;
+	B -> Out();
 }
