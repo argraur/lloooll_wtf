@@ -22,6 +22,9 @@ int main() {
 		A -> Input(i, tmp, tmp1);
 	}
 	A -> Out();
-	A -> Move(1, 2);
+//	A -> Move(1, 2);
+	A -> Out();
+	int t; std::cin >> t;
+	A -> Resize(t);
 	A -> Out();
 }
