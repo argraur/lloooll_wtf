@@ -11,7 +11,7 @@ class Rectangle {
 private:
 	Dots R[4];
 public:
-	void Move();
+	void Resize(float r) {for (int i = 0; i <4; i++) {R[i].x = R[i].x *r; R[i].y = R[i].y * r;}}; 
 	void Input(int Dot, int x, int y) {
 		R[Dot].x = x;
 		R[Dot].y = y;
