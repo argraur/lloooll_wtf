@@ -14,4 +14,12 @@
 #include <cmath>
 #include "Rectangle.cpp"
 
-int main() { return 0; }
+int main() {
+	Rectangle *A = new Rectangle;
+	for ( int i = 0; i < 4; i++) {
+		int tmp, tmp1;
+		std::cin >> tmp >> tmp1;
+		A -> Input(i, tmp, tmp1);
+	}
+	A -> Out();
+}
